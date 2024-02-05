@@ -29,10 +29,10 @@ const remove = catchError(async(req, res) => {
 
 const update = catchError(async(req, res) => {
     const { id } = req.params;
-    const model = await Actor.findByPk(id);
-    if(!model) return res.sendStatus(404);
-    const result = await Actor.update(req.body);
-    return res.json(result);
+    const actor = await Actor.findByPk(id);
+    if(!actor) return res.sendStatus(404);
+    const updatedActor = await actor.update(req.body);
+    return res.json(updatedActor);
 });
 
 module.exports = {

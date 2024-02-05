@@ -31,7 +31,7 @@ const update = catchError(async(req, res) => {
     const { id } = req.params;
     const genre = await Genre.findByPk(id);
     if(!genre) return res.sendStatus(404);
-    const updatedGenre = genre.update(req.body);
+    const updatedGenre = await genre.update(req.body);
     return res.json(updatedGenre);
 });
 

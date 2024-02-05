@@ -14,8 +14,8 @@ const Actor = sequelize.define('actor', {
         type: DataTypes.STRING,
         allowNull: false
     },
-    birthDay: {
-        type: DataTypes.STRING,
+    birthday: {
+        type: DataTypes.DATEONLY,
         allowNull: false  
     },
     image: {

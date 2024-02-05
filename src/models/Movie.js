@@ -1,13 +1,13 @@
 const { DataTypes } = require('sequelize');
 const sequelize = require('../utils/connection');
 
-const movie = sequelize.define('movie', {
+const Movie = sequelize.define('movie', {
     name: {
         type: DataTypes.STRING,
         allowNull: false
     },
     releaseYear: {
-        type: DataTypes.STRING,
+        type: DataTypes.INTEGER,
         allowNull: false
     },
     synopsis: {
@@ -18,4 +18,4 @@ const movie = sequelize.define('movie', {
     }
 });
 
-module.exports = movie;
+module.exports = Movie;

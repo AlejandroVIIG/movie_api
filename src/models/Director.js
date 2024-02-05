@@ -1,7 +1,7 @@
 const { DataTypes } = require('sequelize');
 const sequelize = require('../utils/connection');
 
-const director = sequelize.define('director', {
+const Director = sequelize.define('director', {
     firstName: {
         type: DataTypes.STRING,
         allowNull: false
@@ -14,8 +14,8 @@ const director = sequelize.define('director', {
         type: DataTypes.STRING,
         allowNull: false
     },
-    birthDay: {
-        type: DataTypes.STRING,
+    birthday: {
+        type: DataTypes.DATEONLY,
         allowNull: false
     },
     image: {
@@ -23,4 +23,4 @@ const director = sequelize.define('director', {
     }
 });
 
-module.exports = director;
+module.exports = Director;
